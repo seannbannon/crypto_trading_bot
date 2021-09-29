@@ -9,6 +9,8 @@ const numeral = require('numeral')
 const _ = require('lodash')
 const axios = require('axios')
 
+const web3_utils = require('web3-utils');
+
 // SERVER CONFIG
 const PORT = process.env.PORT || 5000
 const app = express();
@@ -69,7 +71,7 @@ async function monitorPrice() {
       inputTokenSymbol: 'ETH',
       inputTokenAddress: '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
       outputTokenSymbol: 'MKR',
-      outputTokenAddress: '0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2',
+      outputTokenAddress: '0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2', //you can find this on etherscan
       inputAmount: web3.utils.toWei('1', 'ETHER')
     })
 
